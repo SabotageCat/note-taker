@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { findById, createNewNote, validateNote } = require('../../lib/notes');
+const { findById, createNewNote, validateNote, deleteNote } = require('../../lib/notes');
 const { notes } = require('../../db/db.json');
 const uniqid = require('uniqid');
 
@@ -31,5 +31,14 @@ router.post('/notes', (req, res) => {
         res.json(note);
     }
 });
+
+router.delete('/notes/:id', (req, res) => {
+    if (!req.params.id == notes.id) {
+        res.status(404).send('There is no note with this id!');
+        return;
+    }
+    deleteNote(req.params.id, notes);
+    res.status(200).json({ message: 'Note deleted!' });
+})
 
 module.exports = router;
