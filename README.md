@@ -4,6 +4,9 @@
   ## Description
 
   This project creates notes for the user through the web browser. This project was created in order to develop a rudimentary full stack application with the use of a server and API routes. All notes are stored into a JSON file that can be added to or deleted through the web browser.
+  
+  https://sabotagecat.github.io/note-taker/
+  
   ![image](https://user-images.githubusercontent.com/95665563/170529009-8e06d721-9ff7-4762-9ed9-a34a196acfe5.png)
 
   ## Table of Contents
